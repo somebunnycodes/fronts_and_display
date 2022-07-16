@@ -31,6 +31,19 @@ class SLL {
         }
         return null;
     }
+
+    display() {
+        let runner = this.head;
+        let printOut = "";
+        while (runner) {
+            printOut += runner.data;
+            if (runner.next) {
+                printOut += ",";
+            }
+            runner = runner.next;
+        }
+        console.log(printOut);
+    }
 }
 
 
@@ -38,3 +51,4 @@ class SLL {
 let list = new SLL();
 list.addFront(5).addFront(7).addFront(2);
 
+list.display();
